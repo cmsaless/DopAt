@@ -1,0 +1,33 @@
+<!-- Put your page content here -->
+<div class="row justify-content-center">
+
+{{#each quizzes }}
+    <div class="card col-md-7">
+        <h3>{{this.question}}</h3>
+        <table id="professor-class-list" class="table">
+            <tr>
+                {{#unless this.open }}
+                <td>
+                    <a href="/professor/quiz/open/{{this.id}}">
+                        <button class="btn btn-success">Open Quiz</button>
+                    </a>
+                </td>
+                {{/unless }}
+                {{#if this.open }}
+                <td>
+                    <a href="/professor/quiz/close/{{this.id}}">
+                        <button class="btn btn-danger">Close Quiz</button>
+                    </a>
+                </td>
+                {{/if }}
+            </tr>
+            {{#each this.answers}}
+                <tr>
+                    <td>{{this}}</td>   
+                </tr>
+            {{/each }}
+        </table>
+    </div>
+{{/each }}
+
+</div><!-- End of main row -->

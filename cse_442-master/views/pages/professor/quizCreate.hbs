@@ -1,0 +1,50 @@
+<div class="container-fluid h-100">
+
+  <div class="row justify-content-center">
+
+      <div class="card col-md-6">
+        <form action='/professor/quiz/create' method='post'>
+          <input type="hidden" name="classID" value="{{classID}}">
+
+          <table id="professor-class-list" class="table">
+
+              <tr class="table-borderless">
+                <th class='loginHeader center' colspan='2'>Create Quiz Question</th>
+              </tr>
+              <tr>
+                <td class='center'><b>Question</b></td>
+                <td class='left'><input type='text' required name='question' id='question' class='form-control'/></td>
+              </tr>
+              <tr>
+                <td class='center'>Correct Answer</td>
+                <td class='left'><input type='text' required name='correct' id='correct-answer' class='form-control correct-answer'/></td>
+              </tr>
+              <tr>
+                <td class='center'>Incorrect Answer &#35;1</td>
+                <td class='left'><input type='text' required name='wrong1' id='wrong-answer-1' class='form-control wrong-answer'/></td>
+              </tr>
+              <tr>
+                <td class='center'>Incorrect Answer &#35;2</td>
+                <td class='left'><input type='text' required name='wrong2' id='wrong-answer-2' class='form-control wrong-answer'/></td>
+              </tr>
+              <tr>
+                <td class='center'>Incorrect Answer &#35;3</td>
+                <td class='left'><input type='text' required name='wrong3' id='wrong-answer-3' class='form-control wrong-answer'/></td>
+              </tr>
+              <tr>
+                <td class='center'>
+                  <a href='/signup'>
+                    <input class='btn btn-secondary col-3' value='Cancel'>
+                  </a>
+                </td>
+                <td class='center'>
+                    <input class='btn btn-primary' type='submit' value='Create!'>
+                </td>
+              </tr>
+          </table>
+        </form>
+      </div>
+
+  </div><!-- End of main row -->
+
+</div>

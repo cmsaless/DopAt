@@ -1,0 +1,169 @@
+/*Basics*/
+.center{
+  text-align: center;
+}
+.right{
+  text-align: right;
+}
+.left{
+  text-align: left;
+}
+/*End Basics*/
+
+.test {
+    border: 1px solid #ff0000;
+}
+
+body {
+    background-color: #fff;
+    font-size: 1.25em;
+}
+
+nav li {
+    margin-right: 30px;
+}
+
+.grey-background{
+  background-color: #777a7f;
+}
+
+.action-button {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+h1 {
+    margin-top: 15px;
+}
+
+.navbar-dopat {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.card {
+    padding: 15px;
+    margin: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.margin-15 {
+    margin: 15px;
+}
+
+/* Making stuff vertically centered in my table */
+#professor-class-list td {
+    vertical-align: middle;
+}
+
+.loginHeader{
+  font-size:30px;
+}
+
+#button-table{
+  border-style: none;
+}
+
+.manage-buttons {
+    margin-bottom: 15px;
+}
+
+.error-message {
+    margin-top: 15px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#topBannerAd {
+    margin-top: 15px;
+}
+
+.google-button {
+    background-color: #ffffff;
+    border: 1px solid #ebebeb;
+    box-shadow: 2px 3px 15px #ccc;
+    padding: 10px;
+    padding-top: 12px;
+}
+.google-button:hover {
+    box-shadow: 2px 3px 15px #a9a9a9;
+}
+
+.quiz-table{
+text-align: center;
+}
+
+.answer-box{
+  padding:20px 50px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+td.answer-box:hover {
+  background-color: #a2acbc;
+  color: white;
+}
+
+.isHidden {
+  display: none; /* hide radio buttons */
+}
+
+/**
+ * The CSS shown here will not be introduced in the Quickstart guide, but shows
+ * how you can use CSS to style your Element's container.
+ */
+ .StripeElement {
+    background-color: white;
+    height: 40px;
+    padding: 10px 12px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+  }
+
+  .StripeElement--focus {
+    box-shadow: 0 1px 3px 0 #cfd7df;
+  }
+
+  .StripeElement--invalid {
+    border-color: #fa755a;
+  }
+
+  .StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+  }
+
+.wrong-answer, textarea{
+  background-color: #ffc0bc;
+}
+
+.correct-answer, textarea{
+  background-color: #c7fcde;
+}
+
+.label-quiz {
+  display: inline-block;
+  width: 600px;
+  height: 60px;
+  padding: 5px 10px;
+  border: 1px solid #000;
+  border-radius: 25px;
+  font-size: 30px;
+}
+
+.label-quiz:hover {
+  background-color: #ccd4e2;
+  color:white;
+  cursor: pointer;
+}
+
+.radio:checked + .label-quiz {   /* target next sibling (+) label */
+    background-color: #6fd3e8;
+    color:white;
+}

@@ -1,0 +1,55 @@
+<!-- The main container for our page content. This is where your stuff goes -->
+  <div class="row justify-content-center">
+
+      <div class="card col-md-6">
+        <a href="/privacy">DopAt Privacy Policy</a>
+        <br>
+        <a href="/google/auth">
+          <button class="btn google-button">
+              <img src="/img/google-g.png" height="25px" width="25px">
+              &nbsp;&nbsp;Sign up with Google
+          </button>   
+        </a>
+        <form action='/signup/submit' method='post'>
+          <table id="professor-class-list" class="table">
+              <tr class="table-borderless">
+                  <th class='loginHeader center' colspan='2'>Sign Up</th>
+              </tr>
+              <tr>
+                <td class='center'>Name:</td>
+                <td class='left'><input type='text' name='name' id='name' required class='form-control'></td>
+              </tr>
+              <tr>
+                <td class='center'>Email:</td>
+                <td class='left'><input type='text' name='email' id='email' required class='form-control'></td>
+              </tr>
+              <tr>
+                <td class='center'>Password:</td>
+                <td class='left'><input type='password' name='pass' id='pass' required class='form-control'></td>
+              </tr>
+              <tr>
+                <td class='center'>Confirm Password:</td>
+                <td class='left'><input type='password' name='passConfirm' id='passConfirm' required class='form-control'></td>
+              </tr>
+              <tr>
+                <td class='center'>Role:</td>
+                <td class='left'>
+                  <select name='role' id='role' required class='form-control'>
+                    <!--<option disabled selected value> - select an option - </option> -->
+                    <option value="student" selected>Student</option>
+                    <option value="professor">Professor</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td class='center' colspan='2'>
+                    <input type='submit' value='Submit' class='btn btn-primary'>
+                </td>
+              </tr>
+            </table>
+          </form>
+      </div>
+
+  </div><!-- End of main row -->
+
+<script src='/js/signupJS.js'></script>

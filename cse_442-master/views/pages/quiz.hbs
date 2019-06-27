@@ -1,0 +1,38 @@
+<div class="container-fluid h-100">
+
+  <div class="row justify-content-center">
+    <!--const question = req.body.question;
+    const answers = [
+        req.body.correct,
+        req.body.wrong1,
+        req.body.wrong2,
+        req.body.wrong3
+    ];-->
+    <div class="card col-md-6">
+      <form action='/quiz/submit_quiz' method='post'>
+        <h1 class='center'>{{quiz.question}}</h1>
+        <div class='center vcenter questions-container'>
+          <div class='quiz-btn'>
+            <input id="a1" value="a1" class="radio isHidden" name="answer" type="radio" required>
+            <label for="a1" class="label-quiz">{{quiz.answers.[0]}}</label>
+          </div>
+          <div class='quiz-btn'>
+            <input id="a2" value="a2" class="radio isHidden" name="answer" type="radio">
+            <label for="a2" class="label-quiz">{{quiz.answers.[1]}}</label>
+          </div>
+          <div class='quiz-btn'>
+            <input id="a3" value="a3" class="radio isHidden" name="answer" type="radio">
+            <label for="a3" class="label-quiz">{{quiz.answers.[2]}}</label>
+          </div>
+          <div class='quiz-btn'>
+            <input id="a4" value="a4" class="radio isHidden" name="answer" type="radio">
+            <label for="a4" class="label-quiz">{{quiz.answers.[3]}}</label>
+          </div>
+          <input class='btn btn-primary quiz-submit-btn' type='submit' value='Submit'/>
+        </div>
+      </form>
+    </div>
+
+  </div><!-- End of main row -->
+
+</div>

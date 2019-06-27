@@ -1,0 +1,25 @@
+<div class="container-fluid h-100">
+
+  <div class="row justify-content-center">
+        <div class="card col-md-6">
+              <table class="table center">
+                <tr>
+                  <td colspan="2">
+                    <b>Open Quizzes</b>
+                  </td>
+                </tr>
+                {{#each quizzes}}
+                  {{#if this.open }}
+                    <form action='/quiz/{{this._id}}' method='get'>
+                      <tr><td>
+                        {{this.question}}
+                      </td><td>
+                        <input type='submit' value='View Quiz' class='btn btn-primary'>
+                      </td></tr>
+                    </form>
+                  {{/if}}
+                {{/each}}
+              </table>
+</div>
+</div>
+</div>

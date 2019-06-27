@@ -1,0 +1,58 @@
+<div class="container-fluid h-100">
+
+  <div class="row justify-content-center">
+
+      <div class="card col-md-6">
+          <a href="/google/auth">
+            <button class="btn google-button">
+                <img src="/img/google-g.png" height="25px" width="25px">
+                &nbsp;&nbsp;Login with Google
+            </button>   
+        </a>
+
+        <form action='/signup/login' method='post'>
+          <table id="professor-class-list" class="table">
+              <tr class="table-borderless">
+                <th class='loginHeader'>Login</th>
+              </tr>
+              <tr>
+                <td class='center'>Email</td>
+                <td class='left'><input type='text' required name='email' id='email' class='form-control'/></td>
+              </tr>
+              <tr>
+                <td class='center'>Password</td>
+                <td class='left'><input type='password' required name='password' id='password' class='form-control'/></td>
+              </tr>
+              <tr>
+                <td class='center'>
+                  <a href='/signup'>
+                    <input class='btn btn-secondary col-3' value='Sign Up!'>
+                  </a>
+                </td>
+                <td class='center'>
+                    <input class='btn btn-primary' type='submit' value='Submit'>
+                </td>
+                <td>
+                  
+                </td>
+              </tr>
+          </table>
+        </form>
+      </div>
+
+  </div><!-- End of main row -->
+
+</div>
+
+<style>
+    .google-button {
+        background-color: #ffffff;
+        border: 1px solid #ebebeb;
+        box-shadow: 2px 3px 15px #ccc;
+        padding: 10px;
+        padding-top: 12px;
+    }
+    .google-button:hover {
+        box-shadow: 2px 3px 15px #a9a9a9;
+    }
+</style>

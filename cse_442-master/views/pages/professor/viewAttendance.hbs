@@ -1,0 +1,22 @@
+<!-- Put your page content here -->
+<div class="row justify-content-center">
+
+    <div class="card col-md-7">
+        <a href="/professor/profile"><button class="btn btn-primary">Back to Profile</button></a>
+
+        <table class="table">
+            <tr class="table-borderless">
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+            {{#each attendances }}
+            <tr>
+                <td>{{{ student.name }}}</td>
+                <td>{{{ student.email }}}</td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+
+
+</div><!-- End of main row -->

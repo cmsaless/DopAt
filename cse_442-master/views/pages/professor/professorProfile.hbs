@@ -1,0 +1,108 @@
+<!-- Put your page content here -->
+<div class="row justify-content-center">
+
+    <div class="card col-md-7">
+        <h3>Professor:</h3>
+        <table class="table">
+            <tr class="table-borderless">
+                <th>Name</th>
+                <th>Classes</th>
+            </tr>
+            <tr>
+                <td>{{{ user.name }}}</td>
+                <td>{{{ classCount }}}</td>
+            </tr>
+        </table>
+        {{!-- <a href="/professor/delete"><button class="btn btn-danger">Delete Account</button></a> --}}
+    </div>
+
+    {{#if quizzes }}
+        <div class="card col-md-7">
+            <h3>Open Quizzes</h3>
+            <table class="table">
+                <tr class="table-borderless">
+                    <th>Class</th>
+                    <th>Question</th>
+                    <th>Close</th>
+                </tr>
+
+                {{#each quizzes }}
+                <tr>
+                    <td>{{{ this.class.name }}}</td>
+                    <td>{{{ this.question }}}</td>
+                    <td>
+                        <a href="/professor/quiz/close/{{this.id}}">
+                            <button class="btn btn-danger" type="submit">Close Quiz</button>
+                        </a>
+                    </td>
+                </tr>
+                {{/each }}
+
+            </table>
+        </div>
+    {{/if }}
+
+        {{#if attendance }}
+        <div class="card col-md-7">
+            <h3>Open Attendance</h3>
+            <table class="table">
+                <tr class="table-borderless">
+                    <th>Class</th>
+                    <th>Code</th>
+                    <th>Stop</th>
+                </tr>
+
+                {{#each attendance }}
+                <tr>
+                    <td>{{{ class.name }}}</td>
+                    <td>{{{ code }}}</td>
+                    <td>
+                        <form action="/professor/attendance/stop" method="post">
+                            <input type="hidden" name="attendanceCode" value="{{{ id }}}">
+                            <button class="btn btn-danger" type="submit">Stop Attendance</button>
+                        </form>
+                    </td>
+                </tr>
+                {{/each }}
+
+            </table>
+        </div>
+    {{/if }}
+
+    <div class="card col-md-7">
+        <h3>Classes</h3>
+        <table id="professor-class-list" class="table">
+            <tr class="table-borderless">
+                <th>Class Name</th>
+                <th>Manage</th>
+            </tr>{{{ name }}}
+
+            {{#each classes}}
+                <tr>
+                    <td>{{{ name }}}</td>
+                    <td>
+                        <a href="/professor/manage/{{{id}}}">
+                            <button class="btn btn-primary">Manage</button>
+                        </a>
+                    </td>
+                </tr>
+            {{/each}}
+
+        </table>
+    </div>
+
+    <div class="card col-md-7">
+
+        <h3 class="margin-15">Add a Class</h3>
+
+        <form class="form-inline" action="/professor/classes/add" method="post">
+            <label for="className" class="label label-default">Class Name</label>
+            <input class="form-control margin-15" type="text" name="className" placeholder="Class Name">
+            
+            <button class="btn btn-success margin-15">Add Class</button>
+        </form>
+    </div>
+</div><!-- End of main row -->
+<div class="row justify-content-center"> 
+    <a href="/professor/delete"> <button class="btn btn-danger float-left mb-3">Delete Account</button></a>
+</div>

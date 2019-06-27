@@ -1,0 +1,29 @@
+<!-- Put your page content here -->
+<div class="row justify-content-center">
+
+    <div class="card col-md-7">
+
+        <a href="/professor/profile"><button class="btn btn-primary">Back to Profile</button></a>
+
+        <table class="table">
+            <tr class="table-borderless">
+                <th>Date</th>
+                <th>Students</th>
+                <th>View Attendees</th>
+            </tr>
+            {{#each codes }}
+            <tr>
+                <td>{{{ dateString }}}</td>
+                <td>{{ count }}</td>
+                <td>
+                    <a href="/professor/attendance/view/{{ codeID }}">
+                        <button class="btn btn-success">View Attendees</button>
+                    </a>
+                </td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+
+
+</div><!-- End of main row -->

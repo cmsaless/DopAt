@@ -1,0 +1,19 @@
+<!-- Put your page content here -->
+<div class="row justify-content-center">
+
+    <div class="card col-md-7">
+        Attendance Code:
+        <h1>{{{ attendanceCode.code }}}</h1>
+
+        <a href="/professor/profile">
+            <button class="btn btn-primary">Profile</button>
+        </a>
+
+        <form action="/professor/attendance/stop" method="post">
+            <input type="hidden" name="attendanceCode" value="{{{ attendanceCode.id }}}">
+            <button class="btn btn-danger" type="submit">Stop Attendance</button>
+        </form>
+
+    </div>
+
+</div><!-- End of main row -->

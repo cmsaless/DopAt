@@ -1,0 +1,97 @@
+<style>
+caption {
+    display: table-caption;
+    caption-side: top;
+}
+</style>
+
+<div class="container-fluid h-100">
+    <!-- Page -->
+
+    <br>
+
+    <div class="row justify-content-center">
+        <!-- Content of the Page -->
+
+        <div class="col-md" align='center'>
+            <!-- Left Col: student info -->
+            <div class="card col-md-10">
+                <!-- Left Col: student info -->
+                <table class="table">
+                    <tr class="table-borderless">
+                        <th>Name</th>
+                        <th>Email</th>
+                    </tr>
+                    <tr>
+                        <td>{{{ user.name }}}</td>
+                        <td>{{{ user.email }}}</td>
+                    </tr>
+                </table>
+                {{!--
+                <a href="/student/delete">
+                    <button class="btn btn-danger">Delete Account</button>
+                </a> --}}
+            </div>
+
+        </div><!-- End of Left Col -->
+
+        </div>
+        <!-- End of Left Col -->
+
+        <div class="col-md" align="center">
+            <!-- Right col: student courses -->
+            <div class="justify-content-center">
+                <div class="card col-md-10">
+                    <table id="student-class-list" class="table">
+                        <caption>
+                            <a href="/register">
+                                <button class="btn btn-success">Add Course</button>
+                            </a>
+                        </caption>
+                        <tr class="table-borderless">
+                            <th>Courses</th>
+                        </tr>
+
+                        {{#each classes}}
+                        <tr>
+                            <td>{{{ name }}}</td>
+                                <td>
+                                    {{!-- <form action="/attendance/{{{_id}}}" method="post">
+                                        <input type="hidden" name="id" value="{{{ _id }}}">
+                                        <button value="Submit" type="submit" class="btn btn-primary">Take Attendance</button>
+                                    </form> --}}
+                                    <a href="/attendance/{{{_id}}}"><button class="btn btn-primary">Take Attendance</button></a>
+                                </td>
+                                <td>
+                                    <form action="/student/openQuizzes" method="post">
+                                        <input type="hidden" name="id" value="{{{ _id }}}">
+                                        <button value="Submit" type="submit" class="btn btn-secondary">View Open Quizzes</button>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action="/student/drop" method="post">
+                                        <input type="hidden" name="id" value="{{{ _id }}}">
+                                        <button value="Submit" type="submit" class="btn btn-danger">Drop Course</button>
+                                    </form>
+                                </td>
+                        </tr>
+                        {{/each}}
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- End of Right Col -->
+
+    </div>
+    <!-- End of Content -->
+
+    <div class="row justify-content-center">
+        <div class="col-md center">
+            <a href="/student/delete">
+                <button class="btn btn-danger ml-3">Delete Account</button>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- End of Page -->

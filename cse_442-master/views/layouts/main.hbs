@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- make sure this is working -->
+    <!-- Declaring what character set we'll use = UTF-8 -->
+    <meta charset="utf-8">
+    <!-- This helps with scaling for phone screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS included here -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <!-- The title of our webpage -->
+    <title>{{{ pageTitle }}}</title>
+
+    <!-- Including our CSS file that will style the page -->
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+    <!-- Loading the navbar partial -->
+    {{> navbar }}
+
+    <!-- The main container for our page content. This is where your stuff goes -->
+    <div class="container-fluid h-100">
+        {{#unless adBlocked }}
+        {{#unless options.pro }}
+        
+            
+            <!-- Including our top leaderboard ad unit -->
+            <div id="topBannerAd" class="row justify-content-center">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- SqrandTopLeaderboard -->
+                <ins class="adsbygoogle"
+                    style="display:inline-block;width:728px;height:90px"
+                    data-ad-client="ca-pub-1803445544706414"
+                    data-ad-slot="2121014778"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            
+        {{else }}
+            <!-- Ads are not displayed because you are a PRO! Way to support the DopAt team! -->
+        {{/unless }}
+        {{/unless}}
+
+        {{> messages }}
+
+        {{{ body }}}
+    </div>
+
+</body>
+
+<!-- Put your JavaScript files here -->
+
+    <!-- Bootstrap JavaScript files -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</html>

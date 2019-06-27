@@ -1,0 +1,11 @@
+# Ignoring Mac Files
+.DS_Store
+
+# Ignoring all of the node_modules
+node_modules
+
+# Ignoring any log files that were generated
+logs/*.log
+
+# Ignoring our .env varaible with the API Keys
+.env

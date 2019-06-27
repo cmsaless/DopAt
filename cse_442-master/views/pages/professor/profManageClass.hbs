@@ -1,0 +1,48 @@
+<!-- Put your page content here -->
+<div class="row justify-content-center">
+
+    <div class="card col-md-7">
+        <table id="professor-class-list" class="table">
+            <tr class="table-borderless">
+                <th><a href="/professor/profile"><i class="fa fa-arrow-left"></i> Back to Profile</a></th>
+                <th>{{{class.name}}}</th>
+            </tr>
+            <tr>
+                <td>
+                    <form action="/professor/attendance/start" method="post">
+                        <input type="hidden" name="class" value="{{{class.id}}}">
+                        <button class="btn btn-success" type="submit">Start Attendance</button>
+                    </form>
+                </td>
+                <td>
+                    <a href="/professor/attendance/report/{{{class.id}}}">
+                        <button class="btn btn-primary">View Attendance</button>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/professor/quiz/create/{{{class.id}}}">
+                        <button class="btn btn-success">Create Quiz</button>
+                    </a>
+                </td>
+                <td>
+                    <a href="/professor/quiz/view/{{{class.id}}}">
+                        <button class="btn btn-primary">View Quizzes</button>
+                    </a>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><br><br><br></td>
+                <td>
+                    <a href="/professor/delete/{{{class.id}}}">
+                        <button class="btn btn-danger">Delete Class</button>
+                    </a>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+</div><!-- End of main row -->
