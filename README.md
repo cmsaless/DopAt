@@ -1,4 +1,3 @@
-# CSE 442
 **Group**: Paper Airplanes
 
 **Project**: DopAt
